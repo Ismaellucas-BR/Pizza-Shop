@@ -1,4 +1,9 @@
+import MonthOrdersAmountCard from "~/components/dashboard/MonthOrdersAmountCard";
 import type { Route } from "./+types/home";
+import MonthRevenueCard from "~/components/dashboard/MonthRevenueCard";
+import DayOrdrsAmountCard from "~/components/dashboard/DayOrdrsAmountCard";
+import MonthCanceledOrdersAmountCard from "~/components/dashboard/MonthCanceledOrdersAmountCard";
+import RevenueChart from "~/components/dashboard/RevenueChart";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,8 +14,17 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <div>
-      <h1 className="text-red-500">home</h1>
+    <div className="flex flex-col gap-4">
+      <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
+      <div className="grid grid-cols-4 gap-4">
+        <MonthRevenueCard />
+        <MonthOrdersAmountCard />
+        <DayOrdrsAmountCard />
+        <MonthCanceledOrdersAmountCard />
+      </div>
+      <div className="grid grid-cols-9 gap-4">
+        <RevenueChart />
+      </div>
     </div>
   );
 }

@@ -7,8 +7,9 @@ import {
   TableHeader,
   TableRow,
 } from "~/components/ui/table";
-import OrderTableRow from "~/components/TableRow";
-import OrderTableFilter from "~/components/OrderTableFilter";
+import OrderTableRow from "~/components/orders/TableRow";
+import OrderTableFilter from "~/components/orders/OrderTableFilter";
+import Pagination from "~/components/orders/Pagination";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Pedidos | pizza.shop" },
@@ -46,6 +47,7 @@ export default function orders() {
               </TableBody>
             </Table>
           </div>
+          <Pagination pageIndex={0} totalCount={105} perPage={10} />
         </div>
       </div>
     </>

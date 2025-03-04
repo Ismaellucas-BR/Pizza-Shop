@@ -5,17 +5,25 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "./ui/table";
+} from "../ui/table";
 import { Button } from "~/components/ui/button";
 import { ArrowRight, Search, X } from "lucide-react";
+import { Dialog } from "../ui/dialog";
+import { DialogContent, DialogTrigger } from "@radix-ui/react-dialog";
+import OrderDetails from "./OrderDetails";
 export default function OrderTableRow() {
   return (
     <TableRow>
       <TableCell>
-        <Button variant="outline" size="sm">
-          <Search className="h-3 w-3" />
-          <span className="sr-only">Detalhes do pedido</span>
-        </Button>
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button variant="outline" size="sm">
+              <Search className="h-3 w-3" />
+              <span className="sr-only">Detalhes do pedido</span>
+            </Button>
+          </DialogTrigger>
+          <OrderDetails />
+        </Dialog>
       </TableCell>
       <TableCell className="font-mono text-xs font-medium">
         sdfffffffffffff

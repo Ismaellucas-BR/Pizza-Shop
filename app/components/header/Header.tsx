@@ -1,6 +1,6 @@
 import { Separator } from "@radix-ui/react-separator";
 import { Home, Pizza, UtensilsCrossed } from "lucide-react";
-import { ModeToggle } from "./theme/Theme-toggle";
+import { ModeToggle } from "../theme/Theme-toggle";
 import NavLink from "./NavLink";
 import AccountMenu from "./Account-menu";
 
