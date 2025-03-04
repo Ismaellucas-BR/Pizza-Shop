@@ -4,6 +4,7 @@ import MonthRevenueCard from "~/components/dashboard/MonthRevenueCard";
 import DayOrdrsAmountCard from "~/components/dashboard/DayOrdrsAmountCard";
 import MonthCanceledOrdersAmountCard from "~/components/dashboard/MonthCanceledOrdersAmountCard";
 import RevenueChart from "~/components/dashboard/RevenueChart";
+import PopularProductsChart from "~/components/dashboard/popularProductsChart";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -24,6 +25,7 @@ export default function Home() {
       </div>
       <div className="grid grid-cols-9 gap-4">
         <RevenueChart />
+        <PopularProductsChart />
       </div>
     </div>
   );
